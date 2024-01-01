@@ -3,8 +3,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
-
-
 import {
     Form,
     FormControl,
@@ -13,6 +11,7 @@ import {
     FormLabel,
     FormMessage,
 } from "../ui/form"
+import { axiosClient } from "../../api/axios"
 
 const formSchema = z.object({
     email: z.string().email().min(2).max(30),
@@ -23,13 +22,14 @@ function StudentLogin() {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues:{
-            email: '',
-            password: '',
+            email: 'ktaki@taki.com',
+            password: 'password',
         }
     })
 
-    function onSubmit(values) {
-        console.log(values)
+    const onSubmit = async values => {
+        const data = await axiosClient.post('/login',values)
+        console.log(data)
     }
 
     return (
