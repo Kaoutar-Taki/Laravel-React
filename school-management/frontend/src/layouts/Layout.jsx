@@ -11,19 +11,13 @@ return (
                 <FontAwesomeIcon className='fill-current h-8 w-8 mr-2'icon={faGraduationCap} />
                 <span className="font-semibold text-xl tracking-tight">SmartSchool</span>
             </div>
-            <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div className="w-full lg:flex lg:items-center lg:w-auto">
                 <ul className="text-sm lg:flex-grow">
                     <li href="#" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                         <Link to={'/'}>Home</Link>
                     </li>
                     <li href="#" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                         <Link to={'/Login'}>Login</Link>
-                    </li>
-                    <li href="#" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                        <Link to={'/SignUp'}>SignUp</Link>
-                    </li>
-                    <li href="#" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-                        <Link to={'/Users'}>Users</Link>
                     </li>
                 </ul>
                 <div>

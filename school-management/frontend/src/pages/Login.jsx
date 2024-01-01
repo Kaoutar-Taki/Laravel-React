@@ -1,6 +1,11 @@
+import StudentLogin from "../components/student/StudentLogin"
+
 function Login() {
     return (
-        <div>Login</div>
+        <>
+            <div>Student Login</div>
+            <StudentLogin/>
+        </>
     )
 }
 
